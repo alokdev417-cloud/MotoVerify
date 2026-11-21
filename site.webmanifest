@@ -1,0 +1,17 @@
+{
+  "name": "MotoVerify",
+  "short_name": "MotoVerify",
+  "description": "A student demo marketplace for exploring and comparing motorcycles.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f4f1",
+  "theme_color": "#111311",
+  "icons": [
+    {
+      "src": "assets/motoverify-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

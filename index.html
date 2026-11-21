@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111311">
+  <meta name="description" content="Explore and compare motorcycles in the MotoVerify student marketplace demo.">
+  <title>MotoVerify — Find your kind of ride</title>
+  <link rel="icon" href="assets/motoverify-icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="MotoVerify home"><span class="brand-mark">M</span><span>MOTO<span class="brand-light">VERIFY</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="bikes.html">Find a bike</a><a href="how-it-works.html">How it works</a><a href="verify.html">Verify a bike</a><a href="ownership-history.html">Ownership history</a><a href="loan-calculator.html">Loan calculator</a><a href="contact.html">Contact</a><a href="my-activity.html">My activity</a><button class="nav-auth" id="mobileLogin" type="button">Log in</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" id="theme" type="button" aria-label="Switch color theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
+        <button class="button button-dark header-login" id="loginBtn" type="button">Log in</button>
+        <a class="button button-red header-sell" href="sell.html">Sell your bike <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="mobile-menu" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> A STUDENT DEMO BUILT FOR RIDERS</div>
+        <h1>Good rides.<br><span>Zero guesswork.</span></h1>
+        <p>Explore bike listings and price guides, compare your favourites, and browse sample inspection reports. A polished CSE326 marketplace demo—not a live buying service.</p>
+        <div class="hero-actions"><a class="button button-red button-large" href="bikes.html">Explore motorcycles <span aria-hidden="true">↗</span></a><a class="text-link" href="how-it-works.html">How we verify <span aria-hidden="true">→</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><span>M</span></div><div><strong>Built as a CSE326 project</strong><small>Interactive catalogue · sample data only</small></div></div>
+      </div>
+      <div class="hero-caption"><span class="caption-line"></span><span>YOUR NEXT STORY STARTS HERE</span></div>
+      <a class="hero-scroll" href="bikes.html" aria-label="Browse motorcycles">↓</a>
+    </section>
+    <section class="trust-strip" aria-label="Project features">
+      <div><span class="trust-icon">⇄</span><span><strong>Compare bikes</strong><small>See key specs side by side</small></span></div>
+      <div><span class="trust-icon">✓</span><span><strong>Sample inspection reports</strong><small>Clearly marked demo results</small></span></div>
+      <div><span class="trust-icon">↺</span><span><strong>Saved activity</strong><small>Stored in this browser</small></span></div>
+      <div class="trust-count"><strong id="sCount">35</strong><span>catalogue entries to explore</span></div>
+    </section>
+    <section class="home-discover section-wrap">
+      <div class="section-heading"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> THE GOOD STUFF</div><h2>Find your next <span>ride.</span></h2><p>Explore price references and demo listings. Always confirm details before buying.</p></div><a class="text-link" href="bikes.html">Browse all bikes <span aria-hidden="true">→</span></a></div>
+      <div class="home-tiles">
+        <a class="home-tile tile-dark" href="bikes.html"><span class="tile-number">01 / THE LINEUP</span><strong>Find a bike<br>that feels like you.</strong><span class="tile-link">Explore motorcycles <i>↗</i></span></a>
+        <a class="home-tile tile-red" href="how-it-works.html"><span class="tile-number">02 / OUR PROMISE</span><strong>Know what<br>you’re riding into.</strong><span class="tile-link">See how it works <i>↗</i></span></a>
+        <a class="home-tile tile-photo" href="sell.html"><span class="tile-number">03 / YOUR NEXT CHAPTER</span><strong>Pass the keys.<br>Keep the stories.</strong><span class="tile-link">Sell your bike <i>↗</i></span></a>
+      </div>
+    </section>
+    <section class="home-bottom"><div><span class="eyebrow"><span class="eyebrow-dot"></span> EVERY RIDE HAS A STORY</span><h2>Make the next one<br><span>a good one.</span></h2></div><a class="button button-red button-large" href="bikes.html">Find your ride <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">M</span><span>MOTO<span class="brand-light">VERIFY</span></span></a><p>Find a ride that feels right.<br>Trust every mile that follows.</p></div>
+      <div class="footer-links"><span>EXPLORE</span><a href="bikes.html">Find a bike</a><a href="how-it-works.html">How it works</a><a href="sell.html">Sell your bike</a></div>
+      <div class="footer-links"><span>THE DETAILS</span><a href="verify.html">Verification demo</a><a href="contact.html">Contact a seller</a><a href="my-activity.html">My activity</a></div>
+      <div class="footer-note"><span class="eyebrow"><span class="eyebrow-dot"></span> BUILT FOR THE RIDE</span><p>A student project for CSE326<br>Lovely Professional University</p></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yearNow"></span> MotoVerify. Demo marketplace; listings and prices are sample data.</span><span>GOOD RIDES. GOOD PEOPLE. GOOD TO GO.</span></div>
+  </footer>
+  <dialog class="auth-dialog" id="auth" aria-labelledby="aT">
+    <div class="auth-content"><div class="dialog-top"><div><span class="eyebrow eyebrow-dark">YOUR RIDER ACCOUNT</span><h2 id="aT">Log in</h2></div><button class="icon-button close-button" id="aX" type="button" aria-label="Close dialog">×</button></div>
+      <form id="aForm" novalidate><div class="field" id="aNw" hidden><label for="aN">Full name</label><input id="aN" autocomplete="name" placeholder="Your name"><span class="err"></span></div><div class="field"><label for="aE">Email</label><input id="aE" type="email" autocomplete="email" placeholder="you@example.com"><span class="err"></span></div><div class="field"><label for="aP">Password</label><input id="aP" type="password" autocomplete="current-password" placeholder="At least 6 characters"><span class="err"></span></div><button class="button button-red button-full" id="aS" type="submit">Log in <span aria-hidden="true">→</span></button><p class="auth-switch"><span id="aQ">New here?</span> <button class="link-button" id="aTg" type="button">Create an account</button></p></form><p class="auth-demo-note">Demo only — account details are not sent to a server.</p>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

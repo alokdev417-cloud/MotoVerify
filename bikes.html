@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111311">
+  <meta name="description" content="Browse inspected, pre-owned motorcycles and scooters on MotoVerify.">
+  <title>Find a bike — MotoVerify</title>
+  <link rel="icon" href="assets/motoverify-icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="MotoVerify home"><span class="brand-mark">M</span><span>MOTO<span class="brand-light">VERIFY</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="bikes.html" aria-current="page">Find a bike</a><a href="how-it-works.html">How it works</a><a href="verify.html">Verify a bike</a><a href="ownership-history.html">Ownership history</a><a href="loan-calculator.html">Loan calculator</a><a href="contact.html">Contact</a><a href="my-activity.html">My activity</a><button class="nav-auth" id="mobileLogin" type="button">Log in</button></nav>
+    <div class="header-actions"><button class="header-shortlist" id="headerSaved" type="button"><span aria-hidden="true">♡</span> Saved <b id="headerSavedCount">0</b></button><button class="icon-button theme-toggle" id="theme" type="button" aria-label="Switch color theme" title="Switch color theme"><span aria-hidden="true">◐</span></button><button class="button button-dark header-login" id="loginBtn" type="button">Log in</button><a class="button button-red header-sell" href="sell.html">Sell your bike <span aria-hidden="true">↗</span></a></div>
+    <button class="mobile-menu" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div></header>
+  <main>
+    <div class="shop-service-bar"><div><span class="service-location-icon">⌖</span><span>India bike price guides + <strong>Punjab</strong> demo listings</span></div><div><span>✓</span> Price and model details available</div><div><span>↺</span> Demo marketplace</div><a href="how-it-works.html">How buying works <span>→</span></a></div>
+    <section class="shop-heading section-wrap">
+      <div class="shop-heading-top"><div><div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> THE MOTOVERIFY GARAGE</div><h1>Find your next bike</h1><p>Browse everyday favourites first, then explore sports bikes and price guides.</p></div><div class="page-crumb"><a href="index.html">Home</a><span>/</span><span>Motorcycles</span></div></div>
+      <form class="search-panel shop-search" id="heroSearch" role="search">
+        <label class="search-input-wrap" for="q"><span class="search-icon" aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search a bike, brand, spec or city..." aria-label="Search motorcycles"></label>
+        <label class="search-select"><span>BRAND</span><select id="searchBrand" aria-label="Filter by make"><option value="">All brands</option></select></label>
+        <label class="search-select"><span>RIDE TYPE</span><select id="searchType" aria-label="Filter by ride type"><option value="">All bikes</option><option value="Motorcycle">Motorcycles</option><option value="Sports">Sport bikes</option><option value="Scooter">Scooters</option></select></label>
+        <button class="button button-red search-submit" type="submit">Search bikes <span aria-hidden="true">⌕</span></button>
+      </form>
+      <div class="shop-category-row" role="group" aria-label="Shop by motorcycle type">
+        <button class="shop-category active" type="button" data-shop-type=""><span class="category-icon">✳</span><span>All rides<small>See everything</small></span></button>
+        <button class="shop-category" type="button" data-shop-type="Motorcycle"><span class="category-icon">↗</span><span>Everyday &amp; roadsters<small>Commuters shown first</small></span></button>
+        <button class="shop-category" type="button" data-shop-type="Sports"><span class="category-icon">⚡</span><span>Sport bikes<small>Made to move</small></span></button>
+        <button class="shop-category" type="button" data-shop-type="Scooter"><span class="category-icon">◉</span><span>Scooters<small>City-ready rides</small></span></button>
+        <a class="shop-category shop-sell-category" href="sell.html"><span class="category-icon">＋</span><span>Sell your bike<small>Get started free</small></span></a>
+      </div>
+    </section>
+    <section class="inventory-section section-wrap" id="inventory">
+      <div class="shop-results-heading"><div><span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> COMMUTERS FIRST · SPORTS NEXT</span><h2>Explore all rides</h2></div><div class="shop-delivery-note"><span>⌖</span> Price guides + demo listings</div></div>
+      <div class="inventory-toolbar">
+        <div class="results-copy"><span id="count">Loading catalogue…</span><span class="results-divider">/</span><span>Screenshot price references and demo listings</span></div>
+        <div class="toolbar-controls">
+          <button class="filter-toggle" id="mf" type="button" aria-expanded="false" aria-controls="filters"><span aria-hidden="true">☷</span> Filters <span class="filter-count" id="filterCount" hidden>0</span></button>
+          <button class="saved-toggle" id="savedOnly" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Saved <span id="sv">0</span></button>
+          <label class="sort-control" for="sort"><span>Sort by</span><select id="sort"><option value="featured">Everyday bikes first</option><option value="new">Newest first</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="km">Lowest km</option></select></label>
+          <div class="view-toggle" role="group" aria-label="Listing view"><button type="button" class="view-button active" aria-label="Grid view" aria-pressed="true">▦</button><button type="button" class="view-button" aria-label="List view" aria-pressed="false">☰</button></div>
+        </div>
+      </div>
+      <div class="inventory-layout">
+        <aside class="filters" id="filters" aria-label="Motorcycle filters">
+          <div class="filter-heading"><div><span class="eyebrow eyebrow-dark">MAKE IT YOURS</span><h3>Dial it in.</h3></div><button class="reset-button" id="reset" type="button">Clear all</button></div>
+          <fieldset class="filter-group"><legend>Brand</legend><div class="brand-options" id="brands"></div></fieldset>
+          <fieldset class="filter-group"><legend>Engine size <span class="filter-value" id="ccValue">Any</span></legend><select id="cc" aria-label="Engine size"><option value="">Any engine</option><option value="0-125">Up to 125 cc</option><option value="125-200">125–200 cc</option><option value="200-350">200–350 cc</option><option value="350-650">350–650 cc</option><option value="651-3000">Above 650 cc</option></select></fieldset>
+          <fieldset class="filter-group"><legend>Model year <span class="filter-value" id="yrValue">Any</span></legend><select id="yr" aria-label="Minimum model year"><option value="0">Any year</option><option value="2022">2022 or newer</option><option value="2021">2021 or newer</option><option value="2020">2020 or newer</option></select></fieldset>
+          <fieldset class="filter-group price-filter"><legend>Maximum price <span class="filter-value" id="pv"></span></legend><input id="price" type="range" min="30000" max="3500000" step="10000" value="3500000" aria-label="Maximum price"><div class="range-labels"><span>₹30k</span><span>₹35L</span></div></fieldset>
+          <fieldset class="filter-group"><legend>Previous owners</legend><label class="radio-option"><input type="radio" name="own" value="0" checked><span>Any number</span></label><label class="radio-option"><input type="radio" name="own" value="1"><span>First owner only</span></label></fieldset>
+          <div class="filter-note"><span>✳</span><span>Some bikes are new-bike price references, not verified sale listings. Confirm prices and specs with a dealer.</span></div>
+        </aside>
+        <section class="listing-area" aria-label="Available motorcycles">
+          <div class="chip-row" role="group" aria-label="Quick filter by vehicle type"><button class="chip active" data-type="" type="button" aria-pressed="true">All rides</button><button class="chip" data-type="Motorcycle" type="button" aria-pressed="false">Motorcycles</button><button class="chip" data-type="Sports" type="button" aria-pressed="false">Sport bikes</button><button class="chip" data-type="Scooter" type="button" aria-pressed="false">Scooters</button></div>
+          <div class="bike-grid" id="grid" aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+    <aside class="compare-tray" id="compareTray" aria-label="Bike comparison shortlist" hidden>
+      <div class="compare-tray-inner section-wrap"><div class="compare-tray-copy"><strong>Compare bikes <span id="compareCount">0</span>/3</strong><div class="compare-selection" id="compareSelection"></div></div><div class="compare-tray-actions"><button class="compare-clear" id="clearCompare" type="button">Clear</button><button class="button button-red" id="openCompare" type="button" disabled>Compare selected <span aria-hidden="true">→</span></button></div></div>
+    </aside>
+    <section class="page-callout"><span class="eyebrow"><span class="eyebrow-dot"></span> GOT A BIKE TO SELL?</span><h2>Pass the keys.<br><span>Keep the stories.</span></h2><a class="button button-red" href="sell.html">Sell your bike <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer class="site-footer"><div class="footer-main">
+    <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">M</span><span>MOTO<span class="brand-light">VERIFY</span></span></a><p>Find a ride that feels right.<br>Trust every mile that follows.</p></div>
+    <div class="footer-links"><span>EXPLORE</span><a href="bikes.html">Find a bike</a><a href="how-it-works.html">How it works</a><a href="sell.html">Sell your bike</a></div>
+    <div class="footer-links"><span>THE DETAILS</span><a href="verify.html">Verification demo</a><a href="contact.html">Contact a seller</a><a href="my-activity.html">My activity</a></div>
+    <div class="footer-note"><span class="eyebrow"><span class="eyebrow-dot"></span> BUILT FOR THE RIDE</span><p>A student project for CSE326<br>Lovely Professional University</p></div>
+  </div><div class="footer-bottom"><span>© <span id="yearNow"></span> MotoVerify. Demo marketplace; price guides are indicative.</span><span>GOOD RIDES. GOOD PEOPLE. GOOD TO GO.</span></div></footer>
+  <dialog class="detail-dialog" id="dlg" aria-labelledby="dTitle"><div class="dialog-content" id="dBody"></div></dialog>
+  <dialog class="compare-dialog" id="compareDialog" aria-labelledby="compareTitle"><div class="compare-dialog-content" id="compareBody"></div></dialog>
+  <dialog class="auth-dialog" id="auth" aria-labelledby="aT"><div class="auth-content"><div class="dialog-top"><div><span class="eyebrow eyebrow-dark">YOUR RIDER ACCOUNT</span><h2 id="aT">Log in</h2></div><button class="icon-button close-button" id="aX" type="button" aria-label="Close dialog">×</button></div><form id="aForm" novalidate><div class="field" id="aNw" hidden><label for="aN">Full name</label><input id="aN" autocomplete="name" placeholder="Your name"><span class="err"></span></div><div class="field"><label for="aE">Email</label><input id="aE" type="email" autocomplete="email" placeholder="you@example.com"><span class="err"></span></div><div class="field"><label for="aP">Password</label><input id="aP" type="password" autocomplete="current-password" placeholder="At least 6 characters"><span class="err"></span></div><button class="button button-red button-full" id="aS" type="submit">Log in <span aria-hidden="true">→</span></button><p class="auth-switch"><span id="aQ">New here?</span> <button class="link-button" id="aTg" type="button">Create an account</button></p></form><p class="auth-demo-note">Demo only — account details are not sent to a server.</p></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
